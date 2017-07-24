@@ -10,13 +10,17 @@
 		7EFBEB981F2667A100FD9081 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBEB971F2667A100FD9081 /* main.m */; };
 		7EFBEB9B1F2667A100FD9081 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBEB9A1F2667A100FD9081 /* AppDelegate.m */; };
 		7EFBEB9E1F2667A100FD9081 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBEB9D1F2667A100FD9081 /* ViewController.m */; };
-		7EFBEBA11F2667A100FD9081 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EFBEB9F1F2667A100FD9081 /* Main.storyboard */; };
 		7EFBEBA31F2667A100FD9081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EFBEBA21F2667A100FD9081 /* Assets.xcassets */; };
 		7EFBEBA61F2667A100FD9081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EFBEBA41F2667A100FD9081 /* LaunchScreen.storyboard */; };
 		7EFBEBAE1F2667D900FD9081 /* evil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EFBEBAD1F2667D900FD9081 /* evil.jpg */; };
 		7EFBEBB11F266FEE00FD9081 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBEBB01F266FEE00FD9081 /* Model.m */; };
 		7EFBEBB41F26765500FD9081 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFBEBB31F26765500FD9081 /* Security.framework */; };
 		7EFBEBB71F267CD100FD9081 /* NSData+MyEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBEBB61F267CD100FD9081 /* NSData+MyEncryption.m */; };
+		7EFBEBB91F269CCD00FD9081 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7EFBEBB81F269CCD00FD9081 /* giphy.gif */; };
+		7EFBEBBC1F269CF200FD9081 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBEBBB1F269CF200FD9081 /* FirstViewController.m */; };
+		7EFBEBBE1F269EAC00FD9081 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EFBEBBD1F269EAC00FD9081 /* Main.storyboard */; };
+		7EFBEBC01F26A02900FD9081 /* giphy2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7EFBEBBF1F26A02900FD9081 /* giphy2.gif */; };
+		7EFBEBC21F26A2EC00FD9081 /* WebViewContent.html in Resources */ = {isa = PBXBuildFile; fileRef = 7EFBEBC11F26A2EC00FD9081 /* WebViewContent.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +30,6 @@
 		7EFBEB9A1F2667A100FD9081 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7EFBEB9C1F2667A100FD9081 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7EFBEB9D1F2667A100FD9081 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7EFBEBA01F2667A100FD9081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EFBEBA21F2667A100FD9081 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EFBEBA51F2667A100FD9081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EFBEBA71F2667A100FD9081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +39,12 @@
 		7EFBEBB31F26765500FD9081 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7EFBEBB51F267CD100FD9081 /* NSData+MyEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MyEncryption.h"; sourceTree = "<group>"; };
 		7EFBEBB61F267CD100FD9081 /* NSData+MyEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MyEncryption.m"; sourceTree = "<group>"; };
+		7EFBEBB81F269CCD00FD9081 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
+		7EFBEBBA1F269CF200FD9081 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		7EFBEBBB1F269CF200FD9081 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		7EFBEBBD1F269EAC00FD9081 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7EFBEBBF1F26A02900FD9081 /* giphy2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy2.gif; sourceTree = "<group>"; };
+		7EFBEBC11F26A2EC00FD9081 /* WebViewContent.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = WebViewContent.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +83,13 @@
 				7EFBEBB01F266FEE00FD9081 /* Model.m */,
 				7EFBEB9C1F2667A100FD9081 /* ViewController.h */,
 				7EFBEB9D1F2667A100FD9081 /* ViewController.m */,
-				7EFBEB9F1F2667A100FD9081 /* Main.storyboard */,
+				7EFBEBBA1F269CF200FD9081 /* FirstViewController.h */,
+				7EFBEBBB1F269CF200FD9081 /* FirstViewController.m */,
+				7EFBEBC11F26A2EC00FD9081 /* WebViewContent.html */,
+				7EFBEBBD1F269EAC00FD9081 /* Main.storyboard */,
+				7EFBEBB81F269CCD00FD9081 /* giphy.gif */,
 				7EFBEBAD1F2667D900FD9081 /* evil.jpg */,
+				7EFBEBBF1F26A02900FD9081 /* giphy2.gif */,
 				7EFBEB961F2667A100FD9081 /* Supporting Files */,
 			);
 			path = MidtermEnigma;
@@ -162,9 +176,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EFBEBB91F269CCD00FD9081 /* giphy.gif in Resources */,
+				7EFBEBBE1F269EAC00FD9081 /* Main.storyboard in Resources */,
 				7EFBEBA61F2667A100FD9081 /* LaunchScreen.storyboard in Resources */,
+				7EFBEBC01F26A02900FD9081 /* giphy2.gif in Resources */,
+				7EFBEBC21F26A2EC00FD9081 /* WebViewContent.html in Resources */,
 				7EFBEBA31F2667A100FD9081 /* Assets.xcassets in Resources */,
-				7EFBEBA11F2667A100FD9081 /* Main.storyboard in Resources */,
 				7EFBEBAE1F2667D900FD9081 /* evil.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EFBEB9E1F2667A100FD9081 /* ViewController.m in Sources */,
+				7EFBEBBC1F269CF200FD9081 /* FirstViewController.m in Sources */,
 				7EFBEBB71F267CD100FD9081 /* NSData+MyEncryption.m in Sources */,
 				7EFBEB9B1F2667A100FD9081 /* AppDelegate.m in Sources */,
 				7EFBEB981F2667A100FD9081 /* main.m in Sources */,
@@ -187,14 +205,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7EFBEB9F1F2667A100FD9081 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7EFBEBA01F2667A100FD9081 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7EFBEBA41F2667A100FD9081 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -335,6 +345,7 @@
 				7EFBEBAC1F2667A100FD9081 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

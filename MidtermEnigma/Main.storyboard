@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gDP-gu-Bw0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,78 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--First View Controller-->
+        <scene sceneID="7jR-Ta-XZ4">
+            <objects>
+                <viewController id="gDP-gu-Bw0" customClass="FirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w2b-Jp-P72"/>
+                        <viewControllerLayoutGuide type="bottom" id="0VV-QF-S8v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w4w-cm-gkb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObQ-6G-BcU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.17999558076966801" green="0.1938052808137436" blue="0.2025105337078652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0WP-8y-lEJ">
+                                <rect key="frame" x="52" y="553" width="270" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iz-Io-Lrb">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="30"/>
+                                        <color key="backgroundColor" red="0.99270072992700731" green="1" blue="1" alpha="0.076461226851851846" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <color key="tintColor" red="0.95341504005030209" green="0.96042544475655434" blue="0.96042544475655434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="TEXT"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="showDetail" id="Ao0-TQ-4Yr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDF-yb-KYw">
+                                        <rect key="frame" x="0.0" y="50" width="270" height="30"/>
+                                        <color key="backgroundColor" red="0.99270072992700731" green="1" blue="1" alpha="0.076461226851851846" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <color key="tintColor" red="0.9534150401" green="0.96042544480000003" blue="0.96042544480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="IMAGE"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="Ixb-Nv-Qtk"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P A R L E Y  &gt;_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcR-8r-0uW">
+                                <rect key="frame" x="71" y="88" width="232" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="QhF-cw-UI8"/>
+                                    <constraint firstAttribute="width" constant="232" id="YiF-Tk-MS0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="21"/>
+                                <color key="textColor" red="0.96467064435878513" green="0.97176381086142327" blue="0.97176381086142327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0WP-8y-lEJ" firstAttribute="centerX" secondItem="w4w-cm-gkb" secondAttribute="centerX" id="VCW-Ug-PMo"/>
+                            <constraint firstItem="RcR-8r-0uW" firstAttribute="centerY" secondItem="w4w-cm-gkb" secondAttribute="centerY" constant="-223" id="XEW-sQ-Rag"/>
+                            <constraint firstItem="RcR-8r-0uW" firstAttribute="centerX" secondItem="w4w-cm-gkb" secondAttribute="centerX" id="Ygf-Q0-ZNz"/>
+                            <constraint firstItem="0WP-8y-lEJ" firstAttribute="centerY" secondItem="w4w-cm-gkb" secondAttribute="centerY" constant="259.5" id="Znj-5D-x5J"/>
+                            <constraint firstItem="ObQ-6G-BcU" firstAttribute="top" secondItem="w4w-cm-gkb" secondAttribute="top" id="ogz-Z1-YwY"/>
+                            <constraint firstAttribute="trailing" secondItem="ObQ-6G-BcU" secondAttribute="trailing" id="oux-bX-yTF"/>
+                            <constraint firstItem="ObQ-6G-BcU" firstAttribute="leading" secondItem="w4w-cm-gkb" secondAttribute="leading" id="q75-M2-EBZ"/>
+                            <constraint firstItem="0VV-QF-S8v" firstAttribute="top" secondItem="ObQ-6G-BcU" secondAttribute="bottom" id="sUj-Qr-5cC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myWebview" destination="ObQ-6G-BcU" id="j0i-CF-cuO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ORB-Pr-Uad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1316" y="122.78860569715144"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -65,7 +137,7 @@
                                         <rect key="frame" x="168.5" y="0.0" width="158.5" height="30"/>
                                         <color key="backgroundColor" red="0.99270072990000002" green="1" blue="1" alpha="0.1216001157" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Decrypt">
-                                            <color key="titleColor" red="0.0" green="0.89372659176029967" blue="0.85015774886907369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.89372659176029967" green="0.13546281895941004" blue="0.16910466585694756" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="decriptionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wEA-3H-TCY"/>
@@ -103,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="136.28185907046478"/>
+            <point key="canvasLocation" x="-74" y="123"/>
         </scene>
     </scenes>
     <resources>
