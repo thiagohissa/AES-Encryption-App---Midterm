@@ -10,7 +10,9 @@
 #import "Model.h"
 #import "NSData+MyEncryption.h"
 
-@interface ViewController ()
+
+
+@interface ViewController () <MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *mainTextField;
 @property (weak, nonatomic) IBOutlet UITextField *keyTextField;
 @property (weak, nonatomic) IBOutlet UITextView *resultTextField;
@@ -61,6 +63,105 @@
     NSData *data = [NSData dataFromBase64String:originalString];
     self.resultTextField.text = [model decryptData:data withKey:self.keyTextField.text];
 }
+
+
+
+
+
+
+- (IBAction)dismissViewButton:(id)sender {
+    [self dismissViewControllerAnimated:TRUE completion:nil];
+}
+
+
+
+
+
+
+
+
+
+- (IBAction)iMessageButton:(id)sender {
+ 
+    UIAlertController * alert=[UIAlertController alertControllerWithTitle:@"Send"
+                                                                  message:@"Your encrypted message was copied. Which service would you like to use ?"
+                                                           preferredStyle:UIAlertControllerStyleAlert];
+    // Launch iMessage App
+    UIAlertAction* yesButton = [UIAlertAction actionWithTitle:@"iMessage"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction * action)
+    {
+        NSString *stringURL = @"sms:";
+        NSURL *url = [NSURL URLWithString:stringURL];
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+        UIPasteboard *pb = [UIPasteboard generalPasteboard];
+        [pb setString:self.resultTextField.text];
+    }];
+    
+    
+    
+    // Launch Email App
+    UIAlertAction* noButton = [UIAlertAction actionWithTitle:@"Email"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * action)
+    {
+        MFMailComposeViewController *composeVC = [[MFMailComposeViewController alloc] init];
+        composeVC.mailComposeDelegate = self;
+        
+        if (![MFMailComposeViewController canSendMail]) {
+            NSLog(@"Mail services are not available.");
+            return;
+        }
+        
+        // Configure the fields of the interface.
+        [composeVC setToRecipients:@[@"address@example.com"]];
+        [composeVC setSubject:@""];
+        [composeVC setMessageBody:self.resultTextField.text isHTML:NO];
+        
+        // Present the view controller modally.
+        [self presentViewController:composeVC animated:YES completion:nil];
+        
+    }];
+    
+    
+    // Launch Whatsapp App
+    UIAlertAction* whatsAppButton = [UIAlertAction actionWithTitle:@"WhatsApp"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * action)
+    {
+        NSURL *whatsappURL = [NSURL URLWithString:[NSString stringWithFormat:@"whatsapp://send?text=%@",self.resultTextField.text]];
+        
+        // Handling Whatsapp error:
+        if (![[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
+            
+            UIAlertController * whatsappalert =[UIAlertController alertControllerWithTitle:@"Error"
+                message:@"Unable to open Whatsapp"
+                preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* whatsappError = [UIAlertAction actionWithTitle:@"Ok"style:UIAlertActionStyleDefault handler:^(UIAlertAction * action)
+            {
+                
+            }];
+            [whatsappalert addAction:whatsappError];
+            [self presentViewController:whatsappalert animated:YES completion:nil];
+        }
+        else{
+            [[UIApplication sharedApplication] openURL:whatsappURL options:@{} completionHandler:nil];
+        }
+        
+    }];
+    
+    
+    [alert addAction:yesButton];
+    [alert addAction:noButton];
+    [alert addAction:whatsAppButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
+    
+}
+
+
 
 
 

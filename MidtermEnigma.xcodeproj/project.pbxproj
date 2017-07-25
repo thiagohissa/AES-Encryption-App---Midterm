@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EE36BCF1F2790DD000E2871 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE36BCE1F2790DD000E2871 /* ImagePickerViewController.m */; };
+		7EE36BD11F27BF75000E2871 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE36BD01F27BF75000E2871 /* MessageUI.framework */; };
+		7EE36BD31F27C0CA000E2871 /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE36BD21F27C0CA000E2871 /* message.png */; };
 		7EF48AE91F27777000DD89A7 /* WebViewContent2.html in Resources */ = {isa = PBXBuildFile; fileRef = 7EF48AE81F27777000DD89A7 /* WebViewContent2.html */; };
 		7EF48AED1F277A1B00DD89A7 /* polygon.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7EF48AEC1F277A1B00DD89A7 /* polygon.gif */; };
 		7EFBEB981F2667A100FD9081 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBEB971F2667A100FD9081 /* main.m */; };
@@ -25,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7EE36BCD1F2790DD000E2871 /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
+		7EE36BCE1F2790DD000E2871 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
+		7EE36BD01F27BF75000E2871 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		7EE36BD21F27C0CA000E2871 /* message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message.png; sourceTree = "<group>"; };
 		7EF48AE81F27777000DD89A7 /* WebViewContent2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = WebViewContent2.html; sourceTree = "<group>"; };
 		7EF48AEC1F277A1B00DD89A7 /* polygon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = polygon.gif; sourceTree = "<group>"; };
 		7EFBEB931F2667A100FD9081 /* MidtermEnigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MidtermEnigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE36BD11F27BF75000E2871 /* MessageUI.framework in Frameworks */,
 				7EFBEBB41F26765500FD9081 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +95,8 @@
 				7EFBEB9D1F2667A100FD9081 /* ViewController.m */,
 				7EFBEBBA1F269CF200FD9081 /* FirstViewController.h */,
 				7EFBEBBB1F269CF200FD9081 /* FirstViewController.m */,
+				7EE36BCD1F2790DD000E2871 /* ImagePickerViewController.h */,
+				7EE36BCE1F2790DD000E2871 /* ImagePickerViewController.m */,
 				7EFBEBBD1F269EAC00FD9081 /* Main.storyboard */,
 				7EFBEB961F2667A100FD9081 /* Supporting Files */,
 			);
@@ -96,6 +106,7 @@
 		7EFBEB961F2667A100FD9081 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7EE36BD21F27C0CA000E2871 /* message.png */,
 				7EFBEBC11F26A2EC00FD9081 /* WebViewContent.html */,
 				7EF48AE81F27777000DD89A7 /* WebViewContent2.html */,
 				7EFBEBAD1F2667D900FD9081 /* evil.jpg */,
@@ -116,6 +127,7 @@
 		7EFBEBB21F26765500FD9081 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EE36BD01F27BF75000E2871 /* MessageUI.framework */,
 				7EFBEBB31F26765500FD9081 /* Security.framework */,
 			);
 			name = Frameworks;
@@ -187,6 +199,7 @@
 				7EF48AE91F27777000DD89A7 /* WebViewContent2.html in Resources */,
 				7EFBEBAE1F2667D900FD9081 /* evil.jpg in Resources */,
 				7EF48AED1F277A1B00DD89A7 /* polygon.gif in Resources */,
+				7EE36BD31F27C0CA000E2871 /* message.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +215,7 @@
 				7EFBEBB71F267CD100FD9081 /* NSData+MyEncryption.m in Sources */,
 				7EFBEB9B1F2667A100FD9081 /* AppDelegate.m in Sources */,
 				7EFBEB981F2667A100FD9081 /* main.m in Sources */,
+				7EE36BCF1F2790DD000E2871 /* ImagePickerViewController.m in Sources */,
 				7EFBEBB11F266FEE00FD9081 /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
