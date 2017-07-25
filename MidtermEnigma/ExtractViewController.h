@@ -1,5 +1,5 @@
 //
-//  ImagePickerViewController.h
+//  ExtractViewController.h
 //  MidtermEnigma
 //
 //  Created by Thiago Hissa on 2017-07-25.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImagePickerViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIWebView *myWebView;
+@interface ExtractViewController : UIViewController
 
 @end

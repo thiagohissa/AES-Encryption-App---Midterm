@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7EE36BCF1F2790DD000E2871 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE36BCE1F2790DD000E2871 /* ImagePickerViewController.m */; };
 		7EE36BD11F27BF75000E2871 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE36BD01F27BF75000E2871 /* MessageUI.framework */; };
 		7EE36BD31F27C0CA000E2871 /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE36BD21F27C0CA000E2871 /* message.png */; };
+		7EE36C181F27F4F3000E2871 /* ISUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE36C171F27F4F3000E2871 /* ISUtils.m */; };
+		7EE36C1B1F27F53E000E2871 /* ISSteganographer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE36C1A1F27F53E000E2871 /* ISSteganographer.m */; };
+		7EE36C1E1F27F571000E2871 /* ISStegoDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE36C1D1F27F571000E2871 /* ISStegoDecoder.m */; };
+		7EE36C211F27F5A3000E2871 /* ISStegoEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE36C201F27F5A3000E2871 /* ISStegoEncoder.m */; };
+		7EE36C241F27F5E4000E2871 /* ISPixelUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE36C231F27F5E4000E2871 /* ISPixelUtilities.m */; };
+		7EE36C271F27F62A000E2871 /* ISStegoDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE36C261F27F62A000E2871 /* ISStegoDefaults.m */; };
+		7EE36C2A1F27F653000E2871 /* ISStegoUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE36C291F27F653000E2871 /* ISStegoUtilities.m */; };
+		7EE36C2D1F27F6F5000E2871 /* InsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE36C2C1F27F6F5000E2871 /* InsertViewController.m */; };
+		7EE36C301F27FF8A000E2871 /* ExtractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE36C2F1F27FF8A000E2871 /* ExtractViewController.m */; };
 		7EF48AE91F27777000DD89A7 /* WebViewContent2.html in Resources */ = {isa = PBXBuildFile; fileRef = 7EF48AE81F27777000DD89A7 /* WebViewContent2.html */; };
 		7EF48AED1F277A1B00DD89A7 /* polygon.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7EF48AEC1F277A1B00DD89A7 /* polygon.gif */; };
 		7EFBEB981F2667A100FD9081 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBEB971F2667A100FD9081 /* main.m */; };
@@ -28,10 +36,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7EE36BCD1F2790DD000E2871 /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
-		7EE36BCE1F2790DD000E2871 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
 		7EE36BD01F27BF75000E2871 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		7EE36BD21F27C0CA000E2871 /* message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message.png; sourceTree = "<group>"; };
+		7EE36C161F27F4F3000E2871 /* ISUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISUtils.h; sourceTree = "<group>"; };
+		7EE36C171F27F4F3000E2871 /* ISUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISUtils.m; sourceTree = "<group>"; };
+		7EE36C191F27F53E000E2871 /* ISSteganographer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSteganographer.h; sourceTree = "<group>"; };
+		7EE36C1A1F27F53E000E2871 /* ISSteganographer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSteganographer.m; sourceTree = "<group>"; };
+		7EE36C1C1F27F571000E2871 /* ISStegoDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStegoDecoder.h; sourceTree = "<group>"; };
+		7EE36C1D1F27F571000E2871 /* ISStegoDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStegoDecoder.m; sourceTree = "<group>"; };
+		7EE36C1F1F27F5A3000E2871 /* ISStegoEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStegoEncoder.h; sourceTree = "<group>"; };
+		7EE36C201F27F5A3000E2871 /* ISStegoEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStegoEncoder.m; sourceTree = "<group>"; };
+		7EE36C221F27F5E4000E2871 /* ISPixelUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISPixelUtilities.h; sourceTree = "<group>"; };
+		7EE36C231F27F5E4000E2871 /* ISPixelUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISPixelUtilities.m; sourceTree = "<group>"; };
+		7EE36C251F27F62A000E2871 /* ISStegoDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStegoDefaults.h; sourceTree = "<group>"; };
+		7EE36C261F27F62A000E2871 /* ISStegoDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStegoDefaults.m; sourceTree = "<group>"; };
+		7EE36C281F27F653000E2871 /* ISStegoUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStegoUtilities.h; sourceTree = "<group>"; };
+		7EE36C291F27F653000E2871 /* ISStegoUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStegoUtilities.m; sourceTree = "<group>"; };
+		7EE36C2B1F27F6F5000E2871 /* InsertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertViewController.h; sourceTree = "<group>"; };
+		7EE36C2C1F27F6F5000E2871 /* InsertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertViewController.m; sourceTree = "<group>"; };
+		7EE36C2E1F27FF8A000E2871 /* ExtractViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractViewController.h; sourceTree = "<group>"; };
+		7EE36C2F1F27FF8A000E2871 /* ExtractViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractViewController.m; sourceTree = "<group>"; };
 		7EF48AE81F27777000DD89A7 /* WebViewContent2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = WebViewContent2.html; sourceTree = "<group>"; };
 		7EF48AEC1F277A1B00DD89A7 /* polygon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = polygon.gif; sourceTree = "<group>"; };
 		7EFBEB931F2667A100FD9081 /* MidtermEnigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MidtermEnigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +93,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7EE36C151F27F4CA000E2871 /* Steganography */ = {
+			isa = PBXGroup;
+			children = (
+				7EE36C161F27F4F3000E2871 /* ISUtils.h */,
+				7EE36C171F27F4F3000E2871 /* ISUtils.m */,
+				7EE36C191F27F53E000E2871 /* ISSteganographer.h */,
+				7EE36C1A1F27F53E000E2871 /* ISSteganographer.m */,
+				7EE36C1C1F27F571000E2871 /* ISStegoDecoder.h */,
+				7EE36C1D1F27F571000E2871 /* ISStegoDecoder.m */,
+				7EE36C1F1F27F5A3000E2871 /* ISStegoEncoder.h */,
+				7EE36C201F27F5A3000E2871 /* ISStegoEncoder.m */,
+				7EE36C221F27F5E4000E2871 /* ISPixelUtilities.h */,
+				7EE36C231F27F5E4000E2871 /* ISPixelUtilities.m */,
+				7EE36C251F27F62A000E2871 /* ISStegoDefaults.h */,
+				7EE36C261F27F62A000E2871 /* ISStegoDefaults.m */,
+				7EE36C281F27F653000E2871 /* ISStegoUtilities.h */,
+				7EE36C291F27F653000E2871 /* ISStegoUtilities.m */,
+			);
+			name = Steganography;
+			sourceTree = "<group>";
+		};
 		7EFBEB8A1F2667A100FD9081 = {
 			isa = PBXGroup;
 			children = (
@@ -89,14 +134,17 @@
 		7EFBEB951F2667A100FD9081 /* MidtermEnigma */ = {
 			isa = PBXGroup;
 			children = (
+				7EE36C151F27F4CA000E2871 /* Steganography */,
 				7EFBEBAF1F266FEE00FD9081 /* Model.h */,
 				7EFBEBB01F266FEE00FD9081 /* Model.m */,
-				7EFBEB9C1F2667A100FD9081 /* ViewController.h */,
-				7EFBEB9D1F2667A100FD9081 /* ViewController.m */,
 				7EFBEBBA1F269CF200FD9081 /* FirstViewController.h */,
 				7EFBEBBB1F269CF200FD9081 /* FirstViewController.m */,
-				7EE36BCD1F2790DD000E2871 /* ImagePickerViewController.h */,
-				7EE36BCE1F2790DD000E2871 /* ImagePickerViewController.m */,
+				7EFBEB9C1F2667A100FD9081 /* ViewController.h */,
+				7EFBEB9D1F2667A100FD9081 /* ViewController.m */,
+				7EE36C2B1F27F6F5000E2871 /* InsertViewController.h */,
+				7EE36C2C1F27F6F5000E2871 /* InsertViewController.m */,
+				7EE36C2E1F27FF8A000E2871 /* ExtractViewController.h */,
+				7EE36C2F1F27FF8A000E2871 /* ExtractViewController.m */,
 				7EFBEBBD1F269EAC00FD9081 /* Main.storyboard */,
 				7EFBEB961F2667A100FD9081 /* Supporting Files */,
 			);
@@ -210,13 +258,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE36C241F27F5E4000E2871 /* ISPixelUtilities.m in Sources */,
+				7EE36C181F27F4F3000E2871 /* ISUtils.m in Sources */,
 				7EFBEB9E1F2667A100FD9081 /* ViewController.m in Sources */,
 				7EFBEBBC1F269CF200FD9081 /* FirstViewController.m in Sources */,
+				7EE36C211F27F5A3000E2871 /* ISStegoEncoder.m in Sources */,
+				7EE36C301F27FF8A000E2871 /* ExtractViewController.m in Sources */,
+				7EE36C1E1F27F571000E2871 /* ISStegoDecoder.m in Sources */,
+				7EE36C271F27F62A000E2871 /* ISStegoDefaults.m in Sources */,
+				7EE36C1B1F27F53E000E2871 /* ISSteganographer.m in Sources */,
 				7EFBEBB71F267CD100FD9081 /* NSData+MyEncryption.m in Sources */,
+				7EE36C2A1F27F653000E2871 /* ISStegoUtilities.m in Sources */,
 				7EFBEB9B1F2667A100FD9081 /* AppDelegate.m in Sources */,
 				7EFBEB981F2667A100FD9081 /* main.m in Sources */,
-				7EE36BCF1F2790DD000E2871 /* ImagePickerViewController.m in Sources */,
 				7EFBEBB11F266FEE00FD9081 /* Model.m in Sources */,
+				7EE36C2D1F27F6F5000E2871 /* InsertViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
