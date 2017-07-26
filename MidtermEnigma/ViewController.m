@@ -39,7 +39,7 @@
     bottomBorder2.backgroundColor = [UIColor whiteColor].CGColor;
     [self.keyTextField.layer addSublayer:bottomBorder2];
     
-    UIColor *color = [[UIColor whiteColor] colorWithAlphaComponent:0.3];
+    UIColor *color = [[UIColor whiteColor] colorWithAlphaComponent:0.4];
     self.mainTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Insert Text Here" attributes:@{NSForegroundColorAttributeName: color}];
     self.keyTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Key" attributes:@{NSForegroundColorAttributeName: color}];
 }
@@ -79,7 +79,7 @@
 
 
 
-
+#pragma Alert Buttons
 
 - (IBAction)iMessageButton:(id)sender {
  
@@ -87,7 +87,7 @@
                                                                   message:@"Your encrypted message was copied. Which service would you like to use ?"
                                                            preferredStyle:UIAlertControllerStyleAlert];
     // Launch iMessage App
-    UIAlertAction* yesButton = [UIAlertAction actionWithTitle:@"iMessage"
+    UIAlertAction* iMessageButton = [UIAlertAction actionWithTitle:@"iMessage"
                                                         style:UIAlertActionStyleDefault
                                                       handler:^(UIAlertAction * action)
     {
@@ -98,10 +98,15 @@
         [pb setString:self.resultTextField.text];
     }];
     
+  
+    
+    
+    
+    
     
     
     // Launch Email App
-    UIAlertAction* noButton = [UIAlertAction actionWithTitle:@"Email"
+    UIAlertAction* emailButton = [UIAlertAction actionWithTitle:@"Email"
                                                        style:UIAlertActionStyleDefault
                                                      handler:^(UIAlertAction * action)
     {
@@ -122,6 +127,11 @@
         [self presentViewController:composeVC animated:YES completion:nil];
         
     }];
+    
+    
+    
+    
+    
     
     
     // Launch Whatsapp App
@@ -152,10 +162,15 @@
     }];
     
     
-    [alert addAction:yesButton];
-    [alert addAction:noButton];
-    [alert addAction:whatsAppButton];
     
+    // Cancel Button
+    UIAlertAction* cancelButton = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:nil];
+    
+    
+    [alert addAction:iMessageButton];
+    [alert addAction:emailButton];
+    [alert addAction:whatsAppButton];
+    [alert addAction:cancelButton];
     [self presentViewController:alert animated:YES completion:nil];
     
     

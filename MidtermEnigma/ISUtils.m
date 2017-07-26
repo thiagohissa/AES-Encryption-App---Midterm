@@ -23,7 +23,7 @@ NSString *const STEGO_IMAGE_NAME = @"STEGO_IMAGE.png";
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
                                                         message:message
                                                        delegate:nil
-                                              cancelButtonTitle:@"ok"
+                                              cancelButtonTitle:@"Ok"
                                               otherButtonTitles:nil];
     [alertView show];
     alertView = nil;

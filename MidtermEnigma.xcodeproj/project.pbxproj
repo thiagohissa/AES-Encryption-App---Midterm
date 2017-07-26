@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E7ECFEF1F2908770014C516 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7ECFEE1F2908770014C516 /* camera.png */; };
 		7EE36BD11F27BF75000E2871 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE36BD01F27BF75000E2871 /* MessageUI.framework */; };
 		7EE36BD31F27C0CA000E2871 /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE36BD21F27C0CA000E2871 /* message.png */; };
 		7EE36C181F27F4F3000E2871 /* ISUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE36C171F27F4F3000E2871 /* ISUtils.m */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E7ECFEE1F2908770014C516 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		7EE36BD01F27BF75000E2871 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		7EE36BD21F27C0CA000E2871 /* message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message.png; sourceTree = "<group>"; };
 		7EE36C161F27F4F3000E2871 /* ISUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISUtils.h; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		7EFBEB961F2667A100FD9081 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7E7ECFEE1F2908770014C516 /* camera.png */,
 				7EE36BD21F27C0CA000E2871 /* message.png */,
 				7EFBEBC11F26A2EC00FD9081 /* WebViewContent.html */,
 				7EF48AE81F27777000DD89A7 /* WebViewContent2.html */,
@@ -243,6 +246,7 @@
 				7EFBEBA61F2667A100FD9081 /* LaunchScreen.storyboard in Resources */,
 				7EFBEBC01F26A02900FD9081 /* giphy2.gif in Resources */,
 				7EFBEBC21F26A2EC00FD9081 /* WebViewContent.html in Resources */,
+				7E7ECFEF1F2908770014C516 /* camera.png in Resources */,
 				7EFBEBA31F2667A100FD9081 /* Assets.xcassets in Resources */,
 				7EF48AE91F27777000DD89A7 /* WebViewContent2.html in Resources */,
 				7EFBEBAE1F2667D900FD9081 /* evil.jpg in Resources */,

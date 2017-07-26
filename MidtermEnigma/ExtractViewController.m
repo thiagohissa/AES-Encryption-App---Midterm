@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIWebView *myWebView;
-
+@property (weak, nonatomic) IBOutlet UITextView *resultTextView;
 @end
 
 @implementation ExtractViewController
@@ -22,12 +22,46 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureStegoObject];
+    
+    // Background Animation(GIF):
     NSString *htmlPath = [[NSBundle mainBundle] pathForResource:@"WebViewContent2" ofType:@"html"];
     NSURL *htmlURL = [[NSURL alloc] initFileURLWithPath:htmlPath];
     NSData *htmlData = [[NSData alloc] initWithContentsOfURL:htmlURL];
-    
     [self.myWebView loadData:htmlData MIMEType:@"text/html" textEncodingName:@"UTF-8" baseURL:[htmlURL URLByDeletingLastPathComponent]];
 }
+
+
+
+
+#pragma IBActions
+
+- (IBAction)dismissViewButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)cameraButton:(id)sender {
+    [self showImagePickerViewController];
+}
+
+
+- (IBAction)extract {
+    [ISSteganographer dataFromImage:self.imageView.image completionBlock:^(NSData *data, NSError *error) {
+        
+    if (error) {
+      [ISUtils showMessage:[NSString stringWithFormat:@"%@", error]];
+    }
+    else {
+      [self showData:data];
+    }
+        
+   }];
+}
+
+
+
+
+
+
 
 - (void)configureStegoObject {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -39,40 +73,13 @@
         self.imageView.image = image;
     } else {
         [ISUtils showMessage:@"No Stego-object!"];
-        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 
 
 
-
-
-- (IBAction)cameraButton:(id)sender {
-    [self showImagePickerViewController];
-}
-
-
-
-
-
-
-
-
-- (IBAction)extract {
-    [ISSteganographer dataFromImage:self.imageView.image
-                    completionBlock:^(NSData *data, NSError *error) {
-                        if (error) {
-                            [ISUtils showMessage:[NSString stringWithFormat:@"%@", error]];
-                        } else {
-                            [self showData:data];
-                        }
-                    }];
-}
-
 - (void)showData:(NSData *)data {
-    NSString *string = [[NSString alloc] initWithData:data
-                                             encoding:NSUTF8StringEncoding];
-    
+    NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     [ISUtils showMessage:string];
 }
 

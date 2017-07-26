@@ -19,13 +19,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //TextField Style:
+    CALayer *bottomBorder1 = [CALayer layer];
+    bottomBorder1.frame = CGRectMake(0.0f, self.textField.frame.size.height - 1, self.textField.frame.size.width, 0.3f);
+    bottomBorder1.backgroundColor = [UIColor whiteColor].CGColor;
+    [self.textField.layer addSublayer:bottomBorder1];
+    
+    UIColor *color = [[UIColor whiteColor] colorWithAlphaComponent:0.4];
+    self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Insert Text Here" attributes:@{NSForegroundColorAttributeName: color}];
+    
+    
+    // Background Animation(GIF):
     NSString *htmlPath = [[NSBundle mainBundle] pathForResource:@"WebViewContent2" ofType:@"html"];
     NSURL *htmlURL = [[NSURL alloc] initFileURLWithPath:htmlPath];
     NSData *htmlData = [[NSData alloc] initWithContentsOfURL:htmlURL];
-    
     [self.myWebView loadData:htmlData MIMEType:@"text/html" textEncodingName:@"UTF-8" baseURL:[htmlURL URLByDeletingLastPathComponent]];
 }
 
+
+
+#pragma IBActions
 
 - (IBAction)cameraButton:(id)sender {
     [self showImagePickerViewController];
@@ -35,10 +49,15 @@
     [self insert];
 }
 
-
 - (IBAction)dismissViewButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+
+
+
+
 
 
 - (void)insert {
@@ -58,6 +77,8 @@
     }
 }
 
+
+
 - (void)saveImage:(UIImage *)image {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:STEGO_IMAGE_NAME];
@@ -71,6 +92,11 @@
         [ISUtils showMessage:@"Error on saving Stego-object"];
     }
 }
+
+
+
+
+
 
 #pragma mark - ImagePickerViewController
 
