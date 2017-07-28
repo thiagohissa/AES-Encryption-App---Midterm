@@ -79,6 +79,10 @@
 
 
 
+
+
+
+
 #pragma Alert Buttons
 
 - (IBAction)iMessageButton:(id)sender {
@@ -162,17 +166,14 @@
     }];
     
     
-    
     // Cancel Button
     UIAlertAction* cancelButton = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:nil];
-    
     
     [alert addAction:iMessageButton];
     [alert addAction:emailButton];
     [alert addAction:whatsAppButton];
     [alert addAction:cancelButton];
     [self presentViewController:alert animated:YES completion:nil];
-    
     
 }
 

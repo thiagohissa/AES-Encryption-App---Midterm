@@ -12,6 +12,7 @@
 
 @interface InsertViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UIButton *exportOrSaveButton;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end
 
@@ -54,6 +55,45 @@
 }
 
 
+- (IBAction)exportSaveButton:(id)sender {
+    
+    UIAlertController * alert=[UIAlertController alertControllerWithTitle:@"Export"
+                                                                  message:@"Image was copied."
+                                                           preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    // Send Button
+    UIAlertAction *sendButton = [UIAlertAction actionWithTitle:@"iMessage" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSString *stringURL = @"sms:";
+        NSURL *url = [NSURL URLWithString:stringURL];
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+        UIPasteboard *pb = [UIPasteboard generalPasteboard];
+        [pb setImage:self.imageView.image];
+    }];
+    
+    
+    // Save Button
+    UIAlertAction *saveButton = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIImageWriteToSavedPhotosAlbum(self.imageView.image, nil, nil, nil);
+    }];
+    
+    // Cancel Button
+    UIAlertAction *cancelButton = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:nil];
+    
+    
+    
+    [alert addAction:saveButton];
+    [alert addAction:sendButton];
+    [alert addAction:cancelButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+
+
+
+
+
 
 
 
@@ -85,8 +125,18 @@
     if ([UIImagePNGRepresentation(image) writeToFile:filePath atomically:YES]) {
         [ISUtils showMessage:@"Done"];
         
+        
+        
+
+
+        
+
+        
+        
+        
+        
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.navigationController popToRootViewControllerAnimated:YES];
+        // Do nothing
         });
     } else {
         [ISUtils showMessage:@"Error on saving Stego-object"];
@@ -113,7 +163,7 @@
     if (image) {
         self.imageView.image = image;
     }
-    
+    self.exportOrSaveButton.hidden = NO;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

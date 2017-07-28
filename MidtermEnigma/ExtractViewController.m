@@ -55,6 +55,7 @@
     }
         
    }];
+    
 }
 
 
@@ -100,14 +101,12 @@
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
-    if(!image) image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    if(!chosenImage) chosenImage = info[UIImagePickerControllerOriginalImage];
+
+    self.imageView.image = chosenImage;
+    [picker dismissViewControllerAnimated:YES completion:NULL];
     
-    if (image) {
-        self.imageView.image = image;
-    }
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
