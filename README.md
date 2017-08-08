@@ -1,31 +1,19 @@
 ## Synopsis
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
-
-## Code Example
-
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+This encryption app allows users to send AES encrypted messages! The app was built on Objective-C and it has Advanced Encryption Standard - AES - built in (no CocoaPods). The app also allows users to insert/save hidden messages within photos.
 
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+I created this app because I wanted to give the users a way to send secure messages without depending on the security of apps such as WhatsApp, Messenger, Gmail, etc... 
 
-## Installation
+## Framework
 
-Provide code examples and explanations of how to get the project.
-
-## API Reference
-
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
-
-## Tests
-
-Describe and show how to run the tests with code examples.
+For this project I worked with Apple's security framework.
 
 ## Contributors
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+Thiago Hissa
 
-## License
+## Usage
 
-A short snippet describing the license (MIT, Apache, etc.)
+For personal use only.
